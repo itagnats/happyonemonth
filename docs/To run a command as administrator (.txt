@@ -1,0 +1,581 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+atiphan@LTIT010:/mnt/d/Facerec$ ls
+Dockerfile  docker-compose      example            init_data  note.txt          start.sh
+README.md   docker-compose.zip  facerecog_backend  manage.py  requirements.txt
+atiphan@LTIT010:/mnt/d/Facerec$ python
+Command 'python' not found, did you mean:
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+atiphan@LTIT010:/mnt/d/Facerec$ python3
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+KeyboardInterrupt
+>>>
+[1]+  Stopped                 python3
+atiphan@LTIT010:/mnt/d/Facerec$
+atiphan@LTIT010:/mnt/d/Facerec$ python -m venv .venv2
+Command 'python' not found, did you mean:
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+atiphan@LTIT010:/mnt/d/Facerec$ python3 -m venv .venv2
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.10-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: /mnt/d/Facerec/.venv2/bin/python3
+
+atiphan@LTIT010:/mnt/d/Facerec$ sudo apt install python3.10-venv
+[sudo] password for atiphan:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package python3.10-venv is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'python3.10-venv' has no installation candidate
+atiphan@LTIT010:/mnt/d/Facerec$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1509 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [258 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1920 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [326 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [858 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [166 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [16.8 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37.2 kB]
+Get:13 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7588 B]
+Get:14 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [260 B]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+77% [16 Translation-en 5131 kB/5652 kB 91%]                                                          24.1 kB/s 4min 52s
+77% [16 Translation-en 5132 kB/5652 kB 91%]                                                          24.1 kB/s 4min 52s
+
+Get:17 http://archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Ign:18 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages
+Get:19 http://archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+Get:20 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1727 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [318 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1986 kB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [337 kB]
+Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1086 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [251 kB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [22.1 kB]
+Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [43.0 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10.7 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [472 B]
+Get:31 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.1 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.0 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:34 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:35 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [27.2 kB]
+Get:36 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.3 kB]
+Get:37 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [644 B]
+Get:38 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:18 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+Fetched 31.7 MB in 8min 11s (64.6 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+105 packages can be upgraded. Run 'apt list --upgradable' to see them.
+atiphan@LTIT010:/mnt/d/Facerec$ sudo apt install python3.10-venv
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libpython3.10 libpython3.10-minimal libpython3.10-stdlib python3-distutils python3-lib2to3 python3-pip-whl
+  python3-setuptools-whl python3.10 python3.10-minimal
+Suggested packages:
+  python3.10-doc binfmt-support
+The following NEW packages will be installed:
+  python3-distutils python3-lib2to3 python3-pip-whl python3-setuptools-whl python3.10-venv
+The following packages will be upgraded:
+  libpython3.10 libpython3.10-minimal libpython3.10-stdlib python3.10 python3.10-minimal
+5 upgraded, 5 newly installed, 0 to remove and 100 not upgraded.
+Need to get 10.0 MB of archives.
+After this operation, 4053 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10 amd64 3.10.12-1~22.04.3 [1948 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.3 [508 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.3 [1848 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.3 [2242 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.3 [812 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-lib2to3 all 3.10.8-1~22.04 [77.6 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-distutils all 3.10.8-1~22.04 [139 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-pip-whl all 22.0.2+dfsg-1ubuntu0.4 [1680 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-setuptools-whl all 59.6.0-1.2ubuntu0.22.04.1 [788 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3.10-venv amd64 3.10.12-1~22.04.3 [5716 B]
+Fetched 10.0 MB in 4s (2551 kB/s)
+(Reading database ... 24208 files and directories currently installed.)
+Preparing to unpack .../0-libpython3.10_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking libpython3.10:amd64 (3.10.12-1~22.04.3) over (3.10.12-1~22.04.2) ...
+Preparing to unpack .../1-python3.10_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking python3.10 (3.10.12-1~22.04.3) over (3.10.12-1~22.04.2) ...
+Preparing to unpack .../2-libpython3.10-stdlib_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.3) over (3.10.12-1~22.04.2) ...
+Preparing to unpack .../3-python3.10-minimal_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking python3.10-minimal (3.10.12-1~22.04.3) over (3.10.12-1~22.04.2) ...
+Preparing to unpack .../4-libpython3.10-minimal_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.3) over (3.10.12-1~22.04.2) ...
+Selecting previously unselected package python3-lib2to3.
+Preparing to unpack .../5-python3-lib2to3_3.10.8-1~22.04_all.deb ...
+Unpacking python3-lib2to3 (3.10.8-1~22.04) ...
+Selecting previously unselected package python3-distutils.
+Preparing to unpack .../6-python3-distutils_3.10.8-1~22.04_all.deb ...
+Unpacking python3-distutils (3.10.8-1~22.04) ...
+Selecting previously unselected package python3-pip-whl.
+Preparing to unpack .../7-python3-pip-whl_22.0.2+dfsg-1ubuntu0.4_all.deb ...
+Unpacking python3-pip-whl (22.0.2+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../8-python3-setuptools-whl_59.6.0-1.2ubuntu0.22.04.1_all.deb ...
+Unpacking python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.1) ...
+Selecting previously unselected package python3.10-venv.
+Preparing to unpack .../9-python3.10-venv_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking python3.10-venv (3.10.12-1~22.04.3) ...
+Setting up python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.1) ...
+Setting up python3-pip-whl (22.0.2+dfsg-1ubuntu0.4) ...
+Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.3) ...
+Setting up python3-lib2to3 (3.10.8-1~22.04) ...
+Setting up python3-distutils (3.10.8-1~22.04) ...
+Setting up python3.10-minimal (3.10.12-1~22.04.3) ...
+Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.3) ...
+Setting up libpython3.10:amd64 (3.10.12-1~22.04.3) ...
+Setting up python3.10 (3.10.12-1~22.04.3) ...
+Setting up python3.10-venv (3.10.12-1~22.04.3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.4) ...
+/sbin/ldconfig.real: /usr/lib/wsl/lib/libcuda.so.1 is not a symbolic link
+
+atiphan@LTIT010:/mnt/d/Facerec$ ls
+Dockerfile  docker-compose      example            init_data  note.txt          start.sh
+README.md   docker-compose.zip  facerecog_backend  manage.py  requirements.txt
+atiphan@LTIT010:/mnt/d/Facerec$ python -m venv .venv2
+Command 'python' not found, did you mean:
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+atiphan@LTIT010:/mnt/d/Facerec$ python3 -m venv .venv2
+atiphan@LTIT010:/mnt/d/Facerec$ source ./.venv2/bin/Activate.ps1
+-bash: ./.venv2/bin/Activate.ps1: line 1: syntax error near unexpected token `newline'
+'bash: ./.venv2/bin/Activate.ps1: line 1: `<#
+atiphan@LTIT010:/mnt/d/Facerec$ source ./.venv2/bin/activate
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ ls
+Dockerfile  docker-compose      example            init_data  note.txt          start.sh
+README.md   docker-compose.zip  facerecog_backend  manage.py  requirements.txt
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ ls
+Dockerfile  docker-compose      example            init_data  note.txt          start.sh
+README.md   docker-compose.zip  facerecog_backend  manage.py  requirements.txt
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ pip install -r requirements.txt
+Collecting absl-py==2.1.0
+  Downloading absl_py-2.1.0-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 KB 1.6 MB/s eta 0:00:00
+Collecting amqp==5.1.1
+  Downloading amqp-5.1.1-py3-none-any.whl (50 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 KB 3.2 MB/s eta 0:00:00
+Collecting asgiref==3.7.2
+  Downloading asgiref-3.7.2-py3-none-any.whl (24 kB)
+Collecting asn1crypto==1.5.1
+  Downloading asn1crypto-1.5.1-py2.py3-none-any.whl (105 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.0/105.0 KB 7.6 MB/s eta 0:00:00
+Collecting async-timeout==4.0.3
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting bidict==0.22.1
+  Downloading bidict-0.22.1-py3-none-any.whl (35 kB)
+Collecting billiard==4.1.0
+  Downloading billiard-4.1.0-py3-none-any.whl (86 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.7/86.7 KB 4.9 MB/s eta 0:00:00
+Collecting boto3==1.28.70
+  Downloading boto3-1.28.70-py3-none-any.whl (135 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 KB 5.7 MB/s eta 0:00:00
+Collecting botocore==1.31.70
+  Downloading botocore-1.31.70-py3-none-any.whl (11.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 8.7 MB/s eta 0:00:00
+Collecting celery==5.3.4
+  Downloading celery-5.3.4-py3-none-any.whl (421 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 421.4/421.4 KB 9.9 MB/s eta 0:00:00
+Collecting certifi==2024.2.2
+  Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.8/163.8 KB 8.3 MB/s eta 0:00:00
+Collecting cffi==1.16.0
+  Downloading cffi-1.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 KB 7.8 MB/s eta 0:00:00
+Collecting charset-normalizer==3.3.1
+  Downloading charset_normalizer-3.3.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (139 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.2/139.2 KB 8.6 MB/s eta 0:00:00
+Collecting click==8.1.7
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 KB 6.4 MB/s eta 0:00:00
+Collecting click-didyoumean==0.3.0
+  Downloading click_didyoumean-0.3.0-py3-none-any.whl (2.7 kB)
+Collecting click-plugins==1.1.1
+  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Collecting click-repl==0.3.0
+  Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+Collecting cron-descriptor==1.4.0
+  Downloading cron_descriptor-1.4.0.tar.gz (29 kB)
+  Preparing metadata (setup.py) ... done
+Collecting cryptography==2.5
+  Downloading cryptography-2.5-cp34-abi3-manylinux1_x86_64.whl (2.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 10.3 MB/s eta 0:00:00
+Collecting Django==4.2.6
+  Downloading Django-4.2.6-py3-none-any.whl (8.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 8.8 MB/s eta 0:00:00
+Collecting django-admin-sortable2==2.1.10
+  Downloading django_admin_sortable2-2.1.10-py3-none-any.whl (77 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.3/77.3 KB 6.1 MB/s eta 0:00:00
+Collecting django-appconf==1.0.6
+  Downloading django_appconf-1.0.6-py3-none-any.whl (6.4 kB)
+Collecting django-celery-beat==2.5.0
+  Downloading django_celery_beat-2.5.0-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.2/97.2 KB 8.6 MB/s eta 0:00:00
+Collecting django-cors-headers==4.3.0
+  Downloading django_cors_headers-4.3.0-py3-none-any.whl (12 kB)
+Collecting django-cryptography==1.1
+  Downloading django_cryptography-1.1-py2.py3-none-any.whl (11 kB)
+Collecting django-filter==23.3
+  Downloading django_filter-23.3-py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.3/94.3 KB 5.5 MB/s eta 0:00:00
+Collecting django-markdownx==4.0.7
+  Downloading django_markdownx-4.0.7-py2.py3-none-any.whl (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.1/44.1 KB 3.7 MB/s eta 0:00:00
+Collecting django-restql==0.15.4
+  Downloading django_restql-0.15.4-py3-none-any.whl (19 kB)
+Collecting django-safedelete==1.3.2
+  Downloading django_safedelete-1.3.2-py3-none-any.whl (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.7/42.7 KB 3.7 MB/s eta 0:00:00
+Collecting django-storages==1.14.2
+  Downloading django_storages-1.14.2-py3-none-any.whl (47 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.1/47.1 KB 5.2 MB/s eta 0:00:00
+Collecting django-timezone-field==6.0.1
+  Downloading django_timezone_field-6.0.1-py3-none-any.whl (11 kB)
+Collecting djangorestframework==3.14.0
+  Downloading djangorestframework-3.14.0-py3-none-any.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 11.2 MB/s eta 0:00:00
+Collecting djangorestframework-api-key==2.3.0
+  Downloading djangorestframework_api_key-2.3.0-py3-none-any.whl (14 kB)
+Collecting djangorestframework-simplejwt==5.3.0
+  Downloading djangorestframework_simplejwt-5.3.0-py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.0/101.0 KB 6.6 MB/s eta 0:00:00
+Collecting dm-tree==0.1.8
+  Downloading dm_tree-0.1.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (152 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.8/152.8 KB 9.0 MB/s eta 0:00:00
+Collecting h11==0.14.0
+  Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 KB 6.3 MB/s eta 0:00:00
+Collecting h5py==3.10.0
+  Downloading h5py-3.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 11.4 MB/s eta 0:00:00
+Collecting idna==3.4
+  Downloading idna-3.4-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 KB 5.6 MB/s eta 0:00:00
+Collecting jmespath==1.0.1
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting keras==3.0.2
+  Downloading keras-3.0.2-py3-none-any.whl (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 11.6 MB/s eta 0:00:00
+Collecting kombu==5.3.2
+  Downloading kombu-5.3.2-py3-none-any.whl (196 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.7/196.7 KB 8.8 MB/s eta 0:00:00
+Collecting ldap3==2.9.1
+  Downloading ldap3-2.9.1-py2.py3-none-any.whl (432 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 432.2/432.2 KB 10.8 MB/s eta 0:00:00
+Collecting Markdown==3.5.2
+  Downloading Markdown-3.5.2-py3-none-any.whl (103 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.9/103.9 KB 6.6 MB/s eta 0:00:00
+Collecting markdown-it-py==3.0.0
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 KB 6.4 MB/s eta 0:00:00
+Collecting mdurl==0.1.2
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting msgpack==1.0.5
+  Downloading msgpack-1.0.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (316 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 316.8/316.8 KB 11.3 MB/s eta 0:00:00
+Collecting namex==0.0.7
+  Downloading namex-0.0.7-py3-none-any.whl (5.8 kB)
+Collecting numpy==1.26.3
+  Downloading numpy-1.26.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 11.6 MB/s eta 0:00:00
+Collecting Pillow==10.1.0
+  Downloading Pillow-10.1.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 11.3 MB/s eta 0:00:00
+Collecting prompt-toolkit==3.0.39
+  Downloading prompt_toolkit-3.0.39-py3-none-any.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 385.2/385.2 KB 10.8 MB/s eta 0:00:00
+Collecting pyasn1==0.5.1
+  Downloading pyasn1-0.5.1-py2.py3-none-any.whl (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.9/84.9 KB 4.1 MB/s eta 0:00:00
+Collecting pycparser==2.21
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 KB 7.0 MB/s eta 0:00:00
+Collecting pycryptodome==3.20.0
+  Downloading pycryptodome-3.20.0-cp35-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 11.5 MB/s eta 0:00:00
+Collecting Pygments==2.17.2
+  Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 11.4 MB/s eta 0:00:00
+Collecting PyJWT==2.8.0
+  Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+Collecting PyMySQL==1.1.0
+  Downloading PyMySQL-1.1.0-py3-none-any.whl (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 KB 3.4 MB/s eta 0:00:00
+Collecting pyPEG2==2.15.2
+  Downloading pyPEG2-2.15.2.tar.gz (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.3/40.3 KB 3.5 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting python-crontab==3.0.0
+  Downloading python_crontab-3.0.0-py3-none-any.whl (27 kB)
+Collecting python-dateutil==2.8.2
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 KB 9.8 MB/s eta 0:00:00
+Collecting python-dotenv==1.0.0
+  Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+Collecting python-engineio==4.8.0
+  Downloading python_engineio-4.8.0-py3-none-any.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.8/56.8 KB 6.9 MB/s eta 0:00:00
+Collecting python-magic==0.4.27
+  Downloading python_magic-0.4.27-py2.py3-none-any.whl (13 kB)
+Collecting python-socketio==5.10.0
+  Downloading python_socketio-5.10.0-py3-none-any.whl (74 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.4/74.4 KB 5.9 MB/s eta 0:00:00
+Collecting pytz==2023.3.post1
+  Downloading pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.5/502.5 KB 11.9 MB/s eta 0:00:00
+Collecting redis==4.6.0
+  Downloading redis-4.6.0-py3-none-any.whl (241 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 241.1/241.1 KB 10.2 MB/s eta 0:00:00
+Collecting requests==2.31.0
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 KB 4.8 MB/s eta 0:00:00
+Collecting rich==13.7.0
+  Downloading rich-13.7.0-py3-none-any.whl (240 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 KB 9.4 MB/s eta 0:00:00
+Collecting s3transfer==0.7.0
+  Downloading s3transfer-0.7.0-py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.8/79.8 KB 3.7 MB/s eta 0:00:00
+Collecting simple-websocket==1.0.0
+  Downloading simple_websocket-1.0.0-py3-none-any.whl (13 kB)
+Collecting six==1.16.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting sqlparse==0.4.4
+  Downloading sqlparse-0.4.4-py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.2/41.2 KB 5.0 MB/s eta 0:00:00
+Collecting typing_extensions==4.8.0
+  Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting tzdata==2023.3
+  Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 KB 11.1 MB/s eta 0:00:00
+Collecting urllib3==2.0.7
+  Downloading urllib3-2.0.7-py3-none-any.whl (124 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 KB 7.2 MB/s eta 0:00:00
+Collecting uvicorn==0.23.2
+  Downloading uvicorn-0.23.2-py3-none-any.whl (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 KB 4.9 MB/s eta 0:00:00
+Collecting vine==5.0.0
+  Downloading vine-5.0.0-py2.py3-none-any.whl (9.4 kB)
+Collecting wcwidth==0.2.8
+  Downloading wcwidth-0.2.8-py2.py3-none-any.whl (31 kB)
+Collecting websocket-client==1.6.4
+  Downloading websocket_client-1.6.4-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 KB 4.3 MB/s eta 0:00:00
+Collecting wsproto==1.2.0
+  Downloading wsproto-1.2.0-py3-none-any.whl (24 kB)
+Collecting XlsxWriter==3.2.0
+  Downloading XlsxWriter-3.2.0-py3-none-any.whl (159 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.9/159.9 KB 8.5 MB/s eta 0:00:00
+Using legacy 'setup.py install' for cron-descriptor, since package 'wheel' is not installed.
+Using legacy 'setup.py install' for pyPEG2, since package 'wheel' is not installed.
+Installing collected packages: wcwidth, pytz, pyPEG2, namex, msgpack, dm-tree, cron-descriptor, asn1crypto, XlsxWriter, websocket-client, vine, urllib3, tzdata, typing_extensions, sqlparse, six, python-magic, python-dotenv, PyMySQL, PyJWT, Pygments, pycryptodome, pycparser, pyasn1, prompt-toolkit, Pillow, numpy, mdurl, Markdown, jmespath, idna, h11, djangorestframework-api-key, click, charset-normalizer, certifi, billiard, bidict, async-timeout, absl-py, wsproto, uvicorn, requests, redis, python-dateutil, markdown-it-py, ldap3, h5py, click-repl, click-plugins, click-didyoumean, cffi, asgiref, amqp, simple-websocket, rich, python-crontab, kombu, Django, cryptography, botocore, s3transfer, python-engineio, keras, djangorestframework, django-timezone-field, django-storages, django-safedelete, django-markdownx, django-filter, django-cors-headers, django-appconf, django-admin-sortable2, celery, python-socketio, djangorestframework-simplejwt, django-restql, django-cryptography, django-celery-beat, boto3
+  Running setup.py install for pyPEG2 ... done
+  Running setup.py install for cron-descriptor ... done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^CERROR: Operation cancelled by user
+^C
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ ^C
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ pip install -r requirements.txt
+
+
+Requirement already satisfied: absl-py==2.1.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: amqp==5.1.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (5.1.1)
+Requirement already satisfied: asgiref==3.7.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 3)) (3.7.2)
+Requirement already satisfied: asn1crypto==1.5.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 4)) (1.5.1)
+Requirement already satisfied: async-timeout==4.0.3 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 5)) (4.0.3)
+Requirement already satisfied: bidict==0.22.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 6)) (0.22.1)
+Requirement already satisfied: billiard==4.1.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 7)) (4.1.0)
+Collecting boto3==1.28.70
+  Using cached boto3-1.28.70-py3-none-any.whl (135 kB)
+Requirement already satisfied: botocore==1.31.70 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 9)) (1.31.70)
+Collecting celery==5.3.4
+  Using cached celery-5.3.4-py3-none-any.whl (421 kB)
+Requirement already satisfied: certifi==2024.2.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 11)) (2024.2.2)
+Requirement already satisfied: cffi==1.16.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 12)) (1.16.0)
+Requirement already satisfied: charset-normalizer==3.3.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 13)) (3.3.1)
+Requirement already satisfied: click==8.1.7 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 14)) (8.1.7)
+Requirement already satisfied: click-didyoumean==0.3.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 15)) (0.3.0)
+Requirement already satisfied: click-plugins==1.1.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 16)) (1.1.1)
+Requirement already satisfied: click-repl==0.3.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 17)) (0.3.0)
+Requirement already satisfied: cron-descriptor==1.4.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 18)) (1.4.0)
+Requirement already satisfied: cryptography==2.5 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 19)) (2.5)
+Requirement already satisfied: Django==4.2.6 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 20)) (4.2.6)
+Collecting django-admin-sortable2==2.1.10
+  Using cached django_admin_sortable2-2.1.10-py3-none-any.whl (77 kB)
+Collecting django-appconf==1.0.6
+  Using cached django_appconf-1.0.6-py3-none-any.whl (6.4 kB)
+Collecting django-celery-beat==2.5.0
+  Using cached django_celery_beat-2.5.0-py3-none-any.whl (97 kB)
+Collecting django-cors-headers==4.3.0
+  Using cached django_cors_headers-4.3.0-py3-none-any.whl (12 kB)
+Collecting django-cryptography==1.1
+  Using cached django_cryptography-1.1-py2.py3-none-any.whl (11 kB)
+Collecting django-filter==23.3
+  Using cached django_filter-23.3-py3-none-any.whl (94 kB)
+Collecting django-markdownx==4.0.7
+  Using cached django_markdownx-4.0.7-py2.py3-none-any.whl (44 kB)
+Collecting django-restql==0.15.4
+  Using cached django_restql-0.15.4-py3-none-any.whl (19 kB)
+Collecting django-safedelete==1.3.2
+  Using cached django_safedelete-1.3.2-py3-none-any.whl (42 kB)
+Requirement already satisfied: django-storages==1.14.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 30)) (1.14.2)
+Requirement already satisfied: django-timezone-field==6.0.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 31)) (6.0.1)
+Requirement already satisfied: djangorestframework==3.14.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 32)) (3.14.0)
+Requirement already satisfied: djangorestframework-api-key==2.3.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 33)) (2.3.0)
+Collecting djangorestframework-simplejwt==5.3.0
+  Using cached djangorestframework_simplejwt-5.3.0-py3-none-any.whl (101 kB)
+Requirement already satisfied: dm-tree==0.1.8 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 35)) (0.1.8)
+Requirement already satisfied: h11==0.14.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 36)) (0.14.0)
+Requirement already satisfied: h5py==3.10.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 37)) (3.10.0)
+Requirement already satisfied: idna==3.4 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 38)) (3.4)
+Requirement already satisfied: jmespath==1.0.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 39)) (1.0.1)
+Requirement already satisfied: keras==3.0.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 40)) (3.0.2)
+Requirement already satisfied: kombu==5.3.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 41)) (5.3.2)
+Requirement already satisfied: ldap3==2.9.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 42)) (2.9.1)
+Requirement already satisfied: Markdown==3.5.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 43)) (3.5.2)
+Requirement already satisfied: markdown-it-py==3.0.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 44)) (3.0.0)
+Requirement already satisfied: mdurl==0.1.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 45)) (0.1.2)
+Requirement already satisfied: msgpack==1.0.5 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 46)) (1.0.5)
+Requirement already satisfied: namex==0.0.7 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 47)) (0.0.7)
+Requirement already satisfied: numpy==1.26.3 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 48)) (1.26.3)
+Requirement already satisfied: Pillow==10.1.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 49)) (10.1.0)
+Requirement already satisfied: prompt-toolkit==3.0.39 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 50)) (3.0.39)
+Requirement already satisfied: pyasn1==0.5.1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 51)) (0.5.1)
+Requirement already satisfied: pycparser==2.21 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 52)) (2.21)
+Requirement already satisfied: pycryptodome==3.20.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 53)) (3.20.0)
+Requirement already satisfied: Pygments==2.17.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 54)) (2.17.2)
+Requirement already satisfied: PyJWT==2.8.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 55)) (2.8.0)
+Requirement already satisfied: PyMySQL==1.1.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 56)) (1.1.0)
+Requirement already satisfied: pyPEG2==2.15.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 57)) (2.15.2)
+Requirement already satisfied: python-crontab==3.0.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 58)) (3.0.0)
+Requirement already satisfied: python-dateutil==2.8.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 59)) (2.8.2)
+Requirement already satisfied: python-dotenv==1.0.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 60)) (1.0.0)
+Requirement already satisfied: python-engineio==4.8.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 61)) (4.8.0)
+Requirement already satisfied: python-magic==0.4.27 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 62)) (0.4.27)
+Collecting python-socketio==5.10.0
+  Using cached python_socketio-5.10.0-py3-none-any.whl (74 kB)
+Requirement already satisfied: pytz==2023.3.post1 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 64)) (2023.3.post1)
+Requirement already satisfied: redis==4.6.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 65)) (4.6.0)
+Requirement already satisfied: requests==2.31.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 66)) (2.31.0)
+Requirement already satisfied: rich==13.7.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 67)) (13.7.0)
+Requirement already satisfied: s3transfer==0.7.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 68)) (0.7.0)
+Requirement already satisfied: simple-websocket==1.0.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 69)) (1.0.0)
+Requirement already satisfied: six==1.16.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 70)) (1.16.0)
+Requirement already satisfied: sqlparse==0.4.4 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 71)) (0.4.4)
+Requirement already satisfied: typing_extensions==4.8.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 72)) (4.8.0)
+Requirement already satisfied: tzdata==2023.3 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 73)) (2023.3)
+Requirement already satisfied: urllib3==2.0.7 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 74)) (2.0.7)
+Requirement already satisfied: uvicorn==0.23.2 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 75)) (0.23.2)
+Requirement already satisfied: vine==5.0.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 76)) (5.0.0)
+Requirement already satisfied: wcwidth==0.2.8 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 77)) (0.2.8)
+Requirement already satisfied: websocket-client==1.6.4 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 78)) (1.6.4)
+Requirement already satisfied: wsproto==1.2.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 79)) (1.2.0)
+Requirement already satisfied: XlsxWriter==3.2.0 in ./.venv2/lib/python3.10/site-packages (from -r requirements.txt (line 80)) (3.2.0)
+Installing collected packages: django-safedelete, django-markdownx, django-filter, django-cors-headers, django-appconf, django-admin-sortable2, celery, python-socketio, djangorestframework-simplejwt, django-restql, django-cryptography, django-celery-beat, boto3
+Successfully installed boto3-1.28.70 celery-5.3.4 django-admin-sortable2-2.1.10 django-appconf-1.0.6 django-celery-beat-2.5.0 django-cors-headers-4.3.0 django-cryptography-1.1 django-filter-23.3 django-markdownx-4.0.7 django-restql-0.15.4 django-safedelete-1.3.2 djangorestframework-simplejwt-5.3.0 python-socketio-5.10.0
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ python manage.py migrate
+^CTraceback (most recent call last):
+  File "/mnt/d/Facerec/manage.py", line 22, in <module>
+    main()
+  File "/mnt/d/Facerec/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/core/management/__init__.py", line 416, in execute
+    django.setup()
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/__init__.py", line 16, in setup
+    from django.urls import set_script_prefix
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/urls/__init__.py", line 1, in <module>
+    from .base import (
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/urls/base.py", line 8, in <module>
+    from .exceptions import NoReverseMatch, Resolver404
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/urls/exceptions.py", line 1, in <module>
+    from django.http import Http404
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/http/__init__.py", line 1, in <module>
+    from django.http.cookie import SimpleCookie, parse_cookie
+  File "/mnt/d/Facerec/.venv2/lib/python3.10/site-packages/django/http/cookie.py", line 1, in <module>
+    from http import cookies
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 945, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1439, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1411, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1548, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1591, in _fill_cache
+KeyboardInterrupt
+
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ ^C
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ ^C
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$ code .
+Installing VS Code Server for Linux x64 (dc96b837cf6bb4af9cd736aa3af08cf8279f7685)
+Downloading: 100%
+Failed
+--2024-06-13 17:28:42--  https://update.code.visualstudio.com/commit:dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server-linux-x64/stable
+Resolving update.code.visualstudio.com (update.code.visualstudio.com)... 13.107.246.59, 2620:1ec:bdf::59
+Connecting to update.code.visualstudio.com (update.code.visualstudio.com)|13.107.246.59|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://vscode.download.prss.microsoft.com/dbazure/download/stable/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/vscode-server-linux-x64.tar.gz [following]
+--2024-06-13 17:28:42--  https://vscode.download.prss.microsoft.com/dbazure/download/stable/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/vscode-server-linux-x64.tar.gz
+Resolving vscode.download.prss.microsoft.com (vscode.download.prss.microsoft.com)... 199.232.210.172, 199.232.214.172, 2a04:4e42:4e::684, ...
+Connecting to vscode.download.prss.microsoft.com (vscode.download.prss.microsoft.com)|199.232.210.172|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 57433778 (55M) [application/octet-stream]
+Saving to: ‘/home/atiphan/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685-1718274516.tar.gz’
+
+/home/atiphan/.vscode-server/bin/d 100%[================================================================>]  54.77M  12.6MB/s    in 4.7s
+
+2024-06-13 17:28:47 (11.6 MB/s) - ‘/home/atiphan/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685-1718274516.tar.gz’ saved [57433778/57433778]
+
+ERROR: Failed to download https://update.code.visualstudio.com/commit:dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server-linux-x64/stable to /home/atiphan/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685-1718274516.tar.gz
+(.venv2) atiphan@LTIT010:/mnt/d/Facerec$
