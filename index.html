@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy 1 Month baby 🤍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Dancing+Script:wght@500&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #050008;
+        --pink: #ff4fd8;
+        --purple: #8b5cf6;
+        --white: #f5f5f5;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: radial-gradient(circle at top, #12001f, var(--bg));
+        color: var(--white);
+        overflow-x: hidden;
+      }
+
+      /* ===== PASSWORD SCREEN ===== */
+      #lock {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #000, #1a002d);
+        text-align: center;
+      }
+
+      #lock h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+
+      #lock input {
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        width: 60%;
+      }
+
+      #lock button {
+        padding: 10px 24px;
+        background: linear-gradient(45deg, var(--pink), var(--purple));
+        border: none;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        width: 60%;
+      }
+
+      #error {
+        color: #ff6b6b;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+
+      /* ===== MAIN CONTENT ===== */
+      #content {
+        display: none;
+      }
+
+      section {
+        padding: 80px 20px;
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+      }
+
+      /* HERO */
+      .hero {
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(rgba(5, 0, 8, 0.65), rgba(5, 0, 8, 0.85)),
+          url("images/hero.jpg") center/cover no-repeat;
+        animation: slowZoom 20s ease-in-out infinite;
+      }
+
+      @keyframes slowZoom {
+        0% {
+          background-size: 100%;
+        }
+        50% {
+          background-size: 108%;
+        }
+        100% {
+          background-size: 100%;
+        }
+      }
+
+      .hero h1 {
+        font-family: font-family: "Dancing Script", cursive;
+        font-size: 2rem;
+        background: linear-gradient(45deg, var(--pink), var(--purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 16px;
+        opacity: 0.5;
+      }
+
+      .hero p {
+        font-family: "Dancing Script", cursive;
+        font-size: 1rem;
+        opacity: 0.5;
+      }
+
+      /* GALLERY */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+      }
+
+      .photo {
+        background: #0d001a;
+        padding: 12px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 79, 216, 0.25);
+        animation: float 6s ease-in-out infinite;
+        opacity: 0.8;
+      }
+
+      .photo:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .photo:nth-child(3) {
+        animation-delay: 2s;
+      }
+      .photo:nth-child(4) {
+        animation-delay: 3s;
+      }
+      .photo:nth-child(5) {
+        animation-delay: 4s;
+      }
+      .photo:nth-child(6) {
+        animation-delay: 5s;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .photo img {
+        width: 100%;
+        border-radius: 16px;
+      }
+
+      .photo span {
+        display: block;
+        margin-top: 8px;
+        font-size: 1rem;
+        opacity: 0.85;
+        font-family: "Dancing Script", cursive;
+        text-align: center;
+      }
+
+      /* TIMELINE */
+      .timeline {
+        text-align: left;
+        max-width: 600px;
+        margin: 40px auto;
+        border-left: 2px solid var(--purple);
+        padding-left: 20px;
+      }
+
+      .event {
+        margin-bottom: 20px;
+      }
+
+      .event h3 {
+        color: var(--pink);
+        font-size: 1rem;
+      }
+
+      /* LETTER */
+      .letter {
+        font-family: "Dancing Script", cursive;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.6;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+      }
+
+      /* END */
+      .end {
+        font-family: "Playfair Display", serif;
+        font-size: 2.2rem;
+        background: linear-gradient(45deg, var(--pink), var(--purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- PASSWORD SCREEN -->
+    <div id="lock">
+      <h1>For my baby only🤍</h1>
+      <input type="password" id="password" placeholder="Enter our secret key" />
+      <button onclick="unlock()">Enter my heart!</button>
+      <div id="error"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="content">
+      <!-- HERO -->
+      <section class="hero">
+        <h1>Happy 1 Month 🤍</h1>
+        <p>You have fulfilled me in ways I've dreamed for</p>
+        <p>I love you so much my baby</p>
+      </section>
+
+      <!-- GALLERY -->
+      <section>
+        <h2>Our Moments</h2>
+
+        <div class="gallery">
+          <div class="photo">
+            <img src="images/p1.png" />
+            <span>Our First Facetime</span>
+          </div>
+          <div class="photo">
+            <img src="images/p2.png" />
+            <span>Your cute smile</span>
+          </div>
+          <div class="photo">
+            <img src="images/p3.jpg" />
+            <span>Your sparkle eyes</span>
+          </div>
+          <div class="photo">
+            <img src="images/p4.jpg" />
+            <span>Love staring at each other</span>
+          </div>
+          <div class="photo">
+            <img src="images/p5.jpg" />
+            <span>You love me laugh</span>
+          </div>
+          <div class="photo">
+            <img src="images/p6.jpg" />
+            <span>Watch you sleep</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section>
+        <h2>Our First Month</h2>
+        <div class="timeline">
+          <div class="event">
+            <h3>11 Dec</h3>
+            <p>The first facetime ✨</p>
+          </div>
+          <div class="event">
+            <h3>14 Dec</h3>
+            <p>Officially Dating</p>
+          </div>
+          <div class="event">
+            <h3>21 Dec</h3>
+            <p>I write to you & you write back</p>
+          </div>
+          <div class="event">
+            <h3>24 Dec</h3>
+            <p>I meet your lovely parents</p>
+          </div>
+          <div class="event">
+            <h3>30 Dec</h3>
+            <p>I watch you sleep</p>
+          </div>
+          <div class="event">
+            <h3>1 Jan</h3>
+            <p>Celebrate New Year together</p>
+          </div>
+          <div class="event">
+            <h3>6 Jan</h3>
+            <p>You watch me sleep all night</p>
+          </div>
+          <div class="event">
+            <h3>12 Jan</h3>
+            <p>Amazing night activity</p>
+          </div>
+          <div class="event">
+            <h3>13 Jan</h3>
+            <p>1,469 I love you recorded (on text)</p>
+          </div>
+          <div class="event">
+            <h3>Now on</h3>
+            <p>I can't live without you</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETTER -->
+      <section>
+        <div class="letter">
+          Dear my baby, my love, my heart, <br />
+          my sunshine, and my world,
+          <br /><br />
+
+          It’s been one month we’re together. Ever since I found you, I wake up
+          smiling, go to bed with warm heart having a good sleep every night.
+          You’re someone I’ve always dreamed for, someone who genuinely love me
+          for being me and care for me the way no one ever does. Baby, I’m
+          genuinely grateful having you in my life. I thank god every day for
+          sending you my way.
+          <br /><br />
+
+          And remember this baby, You’re beautiful, You’re amazing, You’re
+          priceless, with your kindness, your big heart, and your unconditional
+          love and support. Even word couldn’t explain how lucky I feel having
+          you baby. <br /><br />
+
+          Yes, we’ll be together forever. Yes, baby we’ll do our best to keep us
+          going and glowing, to keep our love and family growing everyday being
+          next to each other baby. I love you so much that I can’t put in words,
+          I really love you baby.<br /><br />
+          Even with distance,<br />
+          I feel you closer every day 🤍<br />
+          14 Jan 2026<br />
+          Ita
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const SECRET = "14122025"; // change this
+
+      function unlock() {
+        const input = document.getElementById("password").value;
+        if (input === SECRET) {
+          document.getElementById("lock").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        } else {
+          document.getElementById("error").innerText =
+            "Wrong secret key 💔, Try again baby";
+        }
+      }
+    </script>
+  </body>
+</html>
